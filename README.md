@@ -1,6 +1,6 @@
 ---
 title: Youtube Comments Sentiment
-emoji: 👀
+emoji: 🎭 
 colorFrom: green
 colorTo: purple
 sdk: gradio
