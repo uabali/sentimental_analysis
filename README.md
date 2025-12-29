@@ -1,18 +1,18 @@
-# YouTube Yorum Duygu Analizi - Teknik Proje Raporu
+# YouTube Yorum Duygu Analizi Proje Raporu
 
-**Ders:** Deep Learning  
-**Geliştirici:** Umut ABALI  
-**Tarih:** Aralık 2024
+**Ders:** BIL485-Deep Learning  
+**Geliştirici:** uabali  
+**Tarih:** Aralık 2025
 
 ---
 
-## � Yönetici Özeti
+Özet
 
 Bu proje, YouTube platformundaki kullanıcı yorumlarını analiz ederek duygu durumlarını (Positive, Negative, Neutral) sınıflandıran derin öğrenme tabanlı bir sistem geliştirmeyi amaçlamaktadır. Proje kapsamında LSTM, Bi-LSTM ve Attention mekanizmalı Bi-LSTM olmak üzere üç farklı mimari sıfırdan eğitilmiş ve performansları karşılaştırılmıştır. Deneysel sonuçlar, **Bi-LSTM** mimarisinin **%66.97 doğruluk** oranı ile en başarılı model olduğunu göstermiştir.
 
 ---
 
-## 1. Proje Konusu (15 Puan)
+## 1. Proje Konusu
 
 ### 1.1 Seçilme Gerekçesi
 Dijital çağda kullanıcıların sosyal medya platformlarında bıraktığı izler, paha biçilemez bir veri kaynağı oluşturmaktadır. Özellikle YouTube, aylık 2.5 milyar aktif kullanıcısı ile dünyanın en büyük video barındırma platformudur. Bu platformdaki yorumlar, sadece video içeriği hakkında değil, toplumsal eğilimler, ürün algıları ve kültürel tepkiler hakkında derinlemesine bilgi sağlamaktadır. Bu projenin seçilme nedeni, yapılandırılmamış (unstructured) metin verisinden anlamlı ve yapılandırılmış bilgi çıkarımı yaparak NLP (Doğal Dil İşleme) yetkinliklerini derin öğrenme teknikleri ile birleştirmektir.
@@ -35,7 +35,7 @@ Bu alanın önemi şu üç ana başlıkta özetlenebilir:
 
 ---
 
-## 2. Veri Setinin Belirlenmesi (15 Puan)
+## 2. Veri Setinin Belirlenmesi
 
 ### 2.1 Veri Kaynağı ve İstatistikleri
 Projede, Kaggle üzerinden temin edilen ve YouTube API kullanılarak toplanmış geniş kapsamlı bir veri seti kullanılmıştır.
@@ -57,7 +57,7 @@ Ham veri, modele verilmeden önce aşağıdaki işlemlerden geçirilmiştir:
 
 ---
 
-## 3. Yöntem ve Seçim Gerekçesi (15 Puan)
+## 3. Yöntem ve Seçim Gerekçesi
 
 ### 3.1 Yöntem Seçimi ve Karşılaştırmalı Analiz
 Bu projede **derin öğrenme (Deep Learning)** yaklaşımı benimsenmiştir. Bunun nedeni, geleneksel yöntemlerin aksine derin öğrenmenin özellik çıkarımı (feature extraction) işlemini otomatik yapması ve anlamsal bağlamı daha iyi yakalamasıdır.
@@ -79,7 +79,7 @@ Hazır (pre-trained) modellerin (BERT vb.) kullanılmama nedeni, **öğrenme hed
 
 ---
 
-## 4. Model Eğitimi & Değerlendirilmesi (20 Puan)
+## 4. Model Eğitimi & Değerlendirilmesi
 
 ### 4.1 Eğitim Konfigürasyonu
 Eğitim, **NVIDIA GeForce RTX 5070 Ti** GPU üzerinde gerçekleştirilmiştir.
@@ -106,28 +106,8 @@ Modellerin test seti üzerindeki performansları aşağıda özetlenmiştir:
 
 ---
 
-## 5. Proje Dokümantasyonu (10 Puan)
+## 5. Proje Dokümantasyonu
 
-Proje, yazılım mühendisliği standartlarına uygun olarak modüler bir yapıda geliştirilmiş veGitHub'a yüklenmeye uygun hale getirilmiştir.
-
-### 5.1 Dosya Yapısı
-```
-youtube_comments_sentiment/
-├── app.py                      # Gradio web arayüzü (Demo)
-├── requirements.txt            # Proje bağımlılıkları
-├── README.md                   # Teknik proje raporu
-├── src/                        # Kaynak kodlar
-│   ├── data_preprocessing.py   # Veri temizleme ve hazırlama
-│   ├── model_lstm.py           # LSTM/BiLSTM mimarileri
-│   ├── model_bilstm_attention.py # Attention mekanizması
-│   ├── train.py                # Eğitim döngüsü
-│   └── evaluate.py             # Performans ölçümü
-├── data/                       # Veri setleri
-├── models/                     # Eğitilmiş model dosyaları (.pt)
-└── results/                    # Grafik ve metrik çıktıları
-```
-
-### 5.2 Görselleştirmeler
 Proje çıktıları `results/` klasöründe yer almaktadır:
 *   **Confusion Matrices:** Her modelin sınıf bazlı hata matrisleri.
 *   **Loss/Accuracy Grafikleri:** Eğitim sürecindeki öğrenme eğrileri.
