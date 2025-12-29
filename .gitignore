@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+env/
+.env
+
+# Data Sets (Genellikle büyük dosyalar git'e yuklenmez)
+data/
+*.csv
+
+# Models (Eger 100MB'dan buyukse Git LFS gerekir)
+# Odev icin modelleri yuklemek istiyorsaniz asagidaki satirlarin basina # koyun
+*.pt
+*.pth
+
+# IDE / Editor
+.vscode/
+.idea/
+
+# OS specific
+.DS_Store
+Thumbs.db
