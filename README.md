@@ -17,7 +17,7 @@ Bu proje, YouTube platformundaki kullanıcı yorumlarını analiz ederek duygu d
 ### 1.1 Seçilme Gerekçesi
 Dijital çağda kullanıcıların sosyal medya platformlarında bıraktığı izler, paha biçilemez bir veri kaynağı oluşturmaktadır. Özellikle YouTube, aylık 2.5 milyar aktif kullanıcısı ile dünyanın en büyük video barındırma platformudur. Bu platformdaki yorumlar, sadece video içeriği hakkında değil, toplumsal eğilimler, ürün algıları ve kültürel tepkiler hakkında derinlemesine bilgi sağlamaktadır. Bu projenin seçilme nedeni, yapılandırılmamış (unstructured) metin verisinden anlamlı ve yapılandırılmış bilgi çıkarımı yaparak NLP (Doğal Dil İşleme) yetkinliklerini derin öğrenme teknikleri ile birleştirmektir.
 
-### 1.2 İlgili Alanda Yapılan Uygulamalar (Literatür Özeti)
+### 1.2 İlgili Alanda Yapılan Uygulamalar
 Duygu analizi alanında yapılan akademik çalışmalar incelendiğinde üç ana yaklaşım göze çarpmaktadır:
 
 1.  **Sözlük Tabanlı (Lexicon-Based) Yaklaşımlar:** Kelimelerin önceden tanımlı duygu skorlarına göre analiz edilmesi (örn. VADER, TextBlob). Basit ancak bağlamı kaçıran yöntemlerdir.
@@ -47,7 +47,7 @@ Projede, Kaggle üzerinden temin edilen ve YouTube API kullanılarak toplanmış
     *   Pozitif: ~%33.3
     *   Nötr: ~%33.2
 
-### 2.2 Veri Ön İşleme (Preprocessing)
+### 2.2 Veri Ön İşleme
 Ham veri, modele verilmeden önce aşağıdaki işlemlerden geçirilmiştir:
 1.  **Temizlik:** URL'ler, HTML etiketleri, @mention'lar ve #hashtag'ler RegEx ile temizlendi.
 2.  **Normalizasyon:** Tüm metin küçük harfe çevrildi.
