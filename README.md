@@ -1,6 +1,5 @@
 # YouTube Yorum Duygu Analizi Proje Raporu
 
-**Ders:** BIL485-Deep Learning  
 **Geliştirici:** uabali  
 **Tarih:** Aralık 2025
 
